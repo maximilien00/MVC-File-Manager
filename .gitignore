@@ -1,0 +1,13 @@
+## Ignorer les fichiers système et VS
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+*.user
+
+## Ignorer le contenu des dossiers d'upload (mais garder le dossier lui-même)
+wwwroot/uploads/*
+!wwwroot/uploads/.gitkeep
+
+## Si tu as mis des fichiers de test (PDFs) dans Files, tu peux décider de les garder ou non
+wwwroot/Files/*

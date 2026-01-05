@@ -1,0 +1,44 @@
+﻿@{
+	ViewData["Title"] = "Liste Page";
+}
+
+@* <span>Ma vue fonctionne.</span> *@
+
+<h1>Liste des documents</h1>
+
+<select id="selectExtension">
+	<option value="">Sans filtre</option>
+	<option value="pdf">PDF</option>
+	<option value="jpg">JPG</option>
+	<option value="txt">TXT</option>
+</select>
+<button onclick="filter()">Filtrer</button>
+
+<table>
+	<tr>
+		<td style="padding:20px">Nom Fichier</td>
+		<td> Taille</td>
+	</tr>
+	@foreach (TP3_DotNet.Models.Documents.Document doc in ViewData["Documents"] as List<TP3_DotNet.Models.Documents.Document>)
+	{
+		<tr>
+			<td style="padding-top:20px; padding-left:20px"><a href="~/Files/@doc.Nom">@doc.Nom</a></td>
+			<td style="padding-top:20px">@doc.Taille </td>
+		</tr>
+	}
+</table>
+
+<script language="JavaScript">
+
+// 	url = 'Documents/Liste/' + document.getElementById("selectExtension").value;
+function filter(){
+	// alert(document.getElementById("selectExtension").value == "")
+	filterValue = document.getElementById("selectExtension").value
+	if(filterValue =! ""){
+		url = "/" + filterValue;
+		window.location.href += url
+	}
+	
+}
+
+</script>
