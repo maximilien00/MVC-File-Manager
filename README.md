@@ -34,7 +34,7 @@ Un module dédié permet d'envoyer des fichiers vers le serveur (dossier `wwwroo
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone <URL_DE_TON_REPO>
+    git clone [https://github.com/maximilien00/MVC-File-Manager](https://github.com/maximilien00/MVC-File-Manager)
     ```
 2.  **Préparer les dossiers :**
     Assurez-vous que les dossiers suivants existent à la racine du projet Web :
